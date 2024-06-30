@@ -16,8 +16,8 @@ contract SimpleDivision {
         uint256 result = numerator / denominator;
 
         assert(result * denominator == numerator);
-        if (denominator < 0) {
-            revert("Denominator cannot be negative");
+        if (result< 0) {
+            revert("Result cannot be negative");
         }
 
         return result;
